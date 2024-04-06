@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "eyegoogler"
+version = "0.1.0"
+description = ""
+authors = ["Daniel Bunting <daniel.bunting@asos.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+fastapi = "^0.110.1"
+mediapipe = "0.10.9" # Bug with >0.010.9 on mac coming from protobuf https://github.com/google/mediapipe/issues/5188
+python-multipart = "^0.0.9"
+uvicorn = { extras = ["standard"], version = "^0.29.0" }
+pydantic-settings = "^2.2.1"
+pytest = "^8.1.1"
+
+
+[tool.poetry.group.dev.dependencies]
+jupyterlab = "^4.1.5"
+ruff = "^0.3.5"
+pytest = "^8.1.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
